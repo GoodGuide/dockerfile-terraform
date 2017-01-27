@@ -14,8 +14,6 @@ RUN version=0.8.5 shasum='4b4324e354c26257f0b830eacb0e7cc7e2ced017d78855f74cb937
  && unzip ./terraform.zip \
  && install ./terraform /usr/local/bin/
 
-COPY ./bashrc /root/.bashrc
-
 COPY ./entrypoint.sh /bin/_entrypoint
 ENTRYPOINT ["/bin/_entrypoint"]
 
