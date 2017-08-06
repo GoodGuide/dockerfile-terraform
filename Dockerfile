@@ -1,4 +1,4 @@
-FROM quay.io/goodguide/base:alpine-3.5
+FROM quay.io/goodguide/base:alpine-3.6
 
 RUN apk --update add \
       bash \
@@ -7,7 +7,7 @@ RUN apk --update add \
       ncurses \
       zip
 
-RUN version=0.9.4 shasum='cc1cffee3b82820b7f049bb290b841762ee920aef3cf4d95382cc7ea01135707' \
+RUN version=0.10.0 shasum='f991039e3822f10d6e05eabf77c9f31f3831149b52ed030775b6ec5195380999' \
  && cd /tmp \
  && curl -L -o ./terraform.zip "https://releases.hashicorp.com/terraform/${version}/terraform_${version}_linux_amd64.zip" \
  && sha256sum ./terraform.zip | grep -q "${shasum}" \
