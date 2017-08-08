@@ -15,7 +15,7 @@ RUN version=0.10.0 shasum='f991039e3822f10d6e05eabf77c9f31f3831149b52ed030775b6e
  && install ./terraform /usr/local/bin/
 
 COPY ./entrypoint.sh /bin/_entrypoint
-ENTRYPOINT ["/sbin/tini", "-vvg", "--", "/bin/_entrypoint"]
+ENTRYPOINT ["/sbin/tini", "-g", "--", "/bin/_entrypoint"]
 
 VOLUME /terraform
 WORKDIR /terraform
