@@ -7,7 +7,7 @@ RUN apk --update add \
       ncurses \
       zip
 
-RUN version=0.10.0 shasum='f991039e3822f10d6e05eabf77c9f31f3831149b52ed030775b6ec5195380999' \
+RUN version=0.10.4 shasum='cff83f669d0e4ac315e792a57659d5aae8ea1fcfdca6931c7cc4679b4e6c60e3' \
  && cd /tmp \
  && curl -L -o ./terraform.zip "https://releases.hashicorp.com/terraform/${version}/terraform_${version}_linux_amd64.zip" \
  && sha256sum ./terraform.zip | grep -q "${shasum}" \
